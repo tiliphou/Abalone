@@ -1,0 +1,30 @@
+        -:    0:Source:test_main.c
+        -:    0:Graph:test_main.gcno
+        -:    0:Data:test_main.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:
+        -:    2:#include "test_plateau.h"
+        -:    3:#include "test_regles.h"
+        -:    4:#include "ihm_test.h"
+        -:    5:
+        -:    6:
+        -:    7:
+        -:    8:
+       19:    9:void run_test(int* fonction_de_test(), int* nb_run,int* nb_failures){
+       19:   10:	if (fonction_de_test==1){
+    #####:   11:		*nb_failures+=1;
+    #####:   12:	}
+       19:   13:	*nb_run+=1;
+       19:   14:}
+        -:   15:
+        1:   16:void main(){
+        -:   17:	Pion* plateau[8][8];
+        1:   18:	int failures=0;
+        1:   19:	int run=0;
+        1:   20:	test_all_plateau_function(plateau,&run,&failures);
+        1:   21:	test_all_regles_function(&run,&failures);
+        1:   22:	test_all_ihm_function(&run,&failures);
+        -:   23:	
+        1:   24:	printf("\nnb_test :%i, erreur:%i\n\n",run,failures);
+        1:   25:}

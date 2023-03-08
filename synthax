@@ -1,0 +1,22 @@
+Proposition de synthaxe des massages :
+
+protocole utilisé TCP
+
+1. Connexion :
+
+Client->serveur : ready 
+Serveur->Client : ready
+
+2. Deplacements :
+
+Boucle
+Client->Serveur : [Lettre][Chiffre]:[Lettre][Chiffre]
+Serveur->Client : [Lettre][Chiffre]:[Lettre][Chiffre]
+
+3. Fin 
+
+Loser->Winner : Congrats
+Winner->Loser : wp
+
+ 
+ 
